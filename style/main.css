@@ -1,0 +1,132 @@
+:root {
+  --vermelho: #e50914;
+  --preta: #141414;
+} /* root permite a criação de variáveis que podem ser chamadas ao longo da folha de estilo, equivale a raiz <html>, mas tem especificidade mais alta, configura-se com a notação: --nome-da-var; */
+
+* /* reset */ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* garante que os elementos respeitam o limite da borda da caixa, expremem-se mas não rompem o limite da caixa */
+}
+
+/* elementos base */
+
+body {
+  background: var(--preta); /* chamando a variável: var() */
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+header .container {
+  display: flex;
+  flex-direction: row; /* não precisa colocar, esse já é o default do flex-direction */
+  align-items: center;
+  justify-content: space-between;
+  }
+
+header .logo {
+  width: 95px;
+  padding: 20px 0 10px 0;
+} /* uso de logo ao invés de texto */
+
+header nav a {
+  text-decoration: none;
+  color: #aaa;
+  margin-right: 3vw; /* optei por aumentar a margin-right */
+} 
+
+header nav a:hover {
+  color: #808080;
+}
+/* utilizei o :hover e o :active para ficar mais parecido com o netflix */
+header nav a:active {
+  color: #fff;
+} 
+
+/* filme principal */
+
+.filme-principal {
+  font-size: 16px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4) 100%), url('/img/capa-aya.jpg'); /* optei por colocar o gradient na horizontal para fazer as informações da esquerda se destacarem numa maior transparência */
+  height: 65vh; /* optei por usar a unidade vh para adaptar melhor a imagem ao elemento pai, e melhorar a responsividade */
+  background-size: cover;
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* neste caso, deixando o conteúdo alinhado a esquerda no eixo-x */
+}
+
+.filme-principal .descricao {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  text-align: justify; /* justificando o texto para nos dispositivos menores ficar mais organizado */
+}
+
+.filme-principal .titulo{
+  margin-top: 3vh;
+  font-size: 60px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  margin-bottom: 3vh; /* acrescentei essa propriedade pra separar mais o título da descrição */
+}
+
+.botao1 {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  padding: 15px 30px;
+  margin-right: 1vw;
+  font-size: 18px;
+  cursor: pointer; /* define cursor como ponteiro pra indicar que existe ação clicável no elemento, como botão */
+  transition: .5s ease all; /* transition define a transição entre as animações*/
+}
+
+.botao1:hover {
+  opacity: .7;
+}
+
+.botao1 i{
+  margin-right: 2vh;
+}
+
+.botao2 {
+  background-color: #696969;
+  opacity: .8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 18px;
+  cursor: pointer; /* define cursor como ponteiro pra indicar que existe ação clicável no elemento, como botão */
+  transition: .5s ease all; /* transition define a transição entre as animações*/
+}
+
+.botao2:hover {
+  opacity: .6;
+}
+
+.botao2 i{
+  margin-right: 2vh;
+}
+
+.container {
+  margin-left: 3vw; /* escolhendo usar unidades responsivas vh e vw para adaptar melhor aos diversos dispositivos, valores fixos ficam ruins em dispositivos com janelas menores */
+}
+
+.filme-principal .container {
+  width: 70%;
+}
+
+/* carousel de filmes */
+
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding-right: .5vw; /* melhora a aparência desgrudar os poster dos filmes minimamente */
+}
+
+.carousel-filmes {
+  margin-left: 3vw;
+}

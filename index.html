@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="icon" href="img/icon-netflix.webp">
+  <!-- jQuery: owl css -->
+  <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+  <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+  <title>Netflix clone</title>
+  <!-- responsividade-->
+  <link rel="stylesheet" href="style/responsive.css">
+</head>
+<body>
+  <header>
+    <div class="container"> <!-- O Principal objetivo de criar uma class-wrapper ou container é poder formatar todos os elementos filhos ao mesmo tempo e não elemento por elemento.-->
+      <img class="logo" src='img/netflix-logo.png'> <!-- optei pelo uso da logo png -->
+      <nav>
+        <!-- tag semântica utilizada para menus de navegação -->
+        <a href="#">Início</a>
+        <a href="#">Séries</a>
+        <a href="#">Filmes</a>
+        <a href="#">Minha lista</a>
+      </nav>
+    </div>
+  </header>
+  <main> <!-- tag semântica-->
+    <div class="filme-principal">
+      <div class="container">
+        <h3 class="titulo">CONTO DA AIA</h3>
+        <p class="descricao">Gilead tem um regime que trata mulheres como propriedade. Offred é uma das poucas mulheres férteis e serva do Comandante, buscando sobreviver e encontrar a filha que foi tirada dela.</p>
+        <div class="botoes"> <!--"toda div herda as propriedades do elemento pai, mas toda div nova (inclusive filha indireta) tem como padrão o display:block; -->
+          <button role='button' class="botao1">
+            <i class="fas fa-play"></i>
+            Assistir agora
+          </button>
+          <button role='button' class="botao2">
+            <i class="fas fa-info-circle"></i> <!-- classes nativas da fontawesome -->
+            Mais informações
+          </button> <!-- role é uma propriedade/atributo que diz a função do botão, independente de onde estiver renderizando, alguns sistemas mobile precisam dessa atribuição.-->
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="carousel-filmes">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img class="box-filme" src="img/mini1.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/mini2.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/mini3.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/mini4.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/mini5.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/mini6.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/mini7.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/mini8.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/mini9.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/mini10.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- Importação para uso dos ícones da fontawesome -->
+  <script src="https://kit.fontawesome.com/2f625cc217.js"></script> 
+  <!-- jQuery: owl js -->
+  <script src='js/owl/jquery.min.js'></script>
+  <script src='js/owl/owl.carousel.min.js'></script> 
+  <!-- o motivo de usar o script no final do body e não no head é que a página é executado em ordem sequencial, o ideal é o javascript ser carregado por último para evitar erros-->
+  <script src='js/owl/setup.js'></script>
+</body>
+</html>
